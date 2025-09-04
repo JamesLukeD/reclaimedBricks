@@ -35,7 +35,7 @@
       /* Header Section */
       .hero-section {
         background: linear-gradient(135deg, rgba(34, 52, 34, 0.7) 0%, rgba(88, 114, 79, 0.6) 50%, rgba(80, 106, 114, 0.7) 100%), 
-                    url('bricks/Img4.jpg');
+                    url('bricks/Img3.jpg');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -156,8 +156,9 @@
 
       .brick-card-image {
         width: 100%;
-        height: 220px;
+        height: 250px;
         object-fit: cover;
+        object-position: center;
         border-radius: 12px;
         margin-bottom: 25px;
         transition: transform 0.3s ease;
@@ -279,16 +280,36 @@
       }
 
       .service-icon {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         background: linear-gradient(135deg, #223422 0%, #58724f 100%);
-        border-radius: 50%;
+        border-radius: 15px;
         margin: 0 auto 30px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 2rem;
+        font-size: 3rem;
         color: white;
+        box-shadow: 0 8px 20px rgba(34, 52, 34, 0.3);
+        transition: transform 0.3s ease;
+      }
+
+      .service-card:hover .service-icon {
+        transform: scale(1.1);
+      }
+
+      .service-card-image {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        transition: transform 0.3s ease;
+      }
+
+      .service-card:hover .service-card-image {
+        transform: scale(1.05);
       }
 
       .service-card h3 {
@@ -872,7 +893,7 @@
         <div class="brick-types-grid">
           <!-- Handmade Bricks -->
           <div class="brick-card">
-            <img src="bricks/Img1.jpg" alt="Reclaimed Handmade Bricks" class="brick-card-image">
+            <img src="bricks/img2.jpg" alt="Reclaimed Handmade Bricks" class="brick-card-image">
             <h3>Handmade Bricks</h3>
             <p>
               These bricks were made by skilled craftsmen creating unique
@@ -884,7 +905,7 @@
 
           <!-- Wirecut Bricks -->
           <div class="brick-card">
-            <img src="bricks/img2.jpg" alt="Reclaimed Wirecut Bricks" class="brick-card-image">
+            <img src="bricks/Img1.jpg" alt="Reclaimed Wirecut Bricks" class="brick-card-image">
             <h3>Wirecut Bricks</h3>
             <p>
               These bricks were cut using wire to create a more uniform finish
@@ -965,23 +986,21 @@
         <div class="services-grid">
           <!-- Delivery Services -->
           <div class="service-card">
-            <div class="service-icon">🚛</div>
+            <img src="bricks/Img4.jpg" alt="Delivery Services" class="service-card-image">
             <h3>Worldwide Delivery</h3>
             <p>
-              We offer a worldwide delivery service from individual items to
-              multiple articulated loads. We use a range of delivery services
-              which include the pallet network and our own fleet of specialist
-              vehicles which include wagons with detachable trailers and
-              moffetts, vans, pickups and a 2 man delivery service for heavier
-              bulky items that need to be taken into your home. Please contact
-              our friendly sales team who will assist you with any queries or
-              requirements you may have.
+              We offer a worldwide delivery service from individual items to multiple articulated loads. 
+              We use a range of delivery services which include the pallet network and our own fleet of
+               specialist vehicles which include wagons with detachable trailers and moffetts, vans, 
+               pickups and a 2 man delivery service for heavier bulky items that need to be taken into your home. 
+               Please contact our friendly sales team who will assist you with any queries or requirements 
+               you may have.
             </p>
           </div>
 
           <!-- Brick Matching -->
           <div class="service-card">
-            <div class="service-icon">🔍</div>
+            <img src="bricks/Img1.jpg" alt="Brick Matching Service" class="service-card-image">
             <h3>Brick Matching Service</h3>
             <p>
               We offer a brick matching service to help you find the right
