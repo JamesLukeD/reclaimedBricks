@@ -27,9 +27,9 @@
       }
 
       .container {
-        max-width: 2000px;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 0 20px;
+        padding: 0 40px;
       }
 
       /* Header Section */
@@ -208,55 +208,70 @@
 
       /* Why Choose Section */
       .why-choose {
+        background: #edefd7;
+        color: #333;
+        padding: 80px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .why-choose-box {
         background: linear-gradient(135deg, #223422 0%, #58724f 100%);
         color: white;
-        padding: 80px 0;
+        padding: 50px;
+        border-radius: 15px;
+        max-width: 800px;
+        margin: 0 40px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        border: 2px solid rgba(226, 168, 37, 0.3);
       }
 
       .why-choose h2 {
         text-align: center;
-        font-size: 2.8rem;
-        margin-bottom: 50px;
+        font-size: 2.2rem;
+        margin-bottom: 35px;
         color: #edefd7;
+        line-height: 1.2;
       }
 
       .why-choose-content {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
+        grid-template-columns: 1fr;
+        gap: 35px;
         align-items: center;
       }
 
       .why-choose-text {
-        font-size: 1.2rem;
-        line-height: 1.8;
+        font-size: 1.15rem;
+        line-height: 1.7;
       }
 
       .why-choose-text p {
-        margin-bottom: 25px;
+        margin-bottom: 22px;
       }
 
       .stats-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        gap: 25px;
       }
 
       .stat-item {
         text-align: center;
-        padding: 30px;
+        padding: 25px;
         background: rgba(237, 239, 215, 0.1);
         border-radius: 12px;
         border: 1px solid rgba(226, 168, 37, 0.3);
       }
       .stat-number {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: bold;
         color: #e2a825;
         display: block;
       }
       .stat-label {
-        font-size: 1.1rem;
+        font-size: 1rem;
         opacity: 0.9;
         margin-top: 10px;
       }
@@ -472,9 +487,12 @@
       }
 
       .faq-item {
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
+        border: 1px solid #e9ecef;
+        border-radius: 10px;
         overflow: hidden;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        background: #ffffff;
       }
 
       .faq-question {
@@ -487,17 +505,21 @@
         width: 100%;
         text-align: left;
         font-size: 1.1rem;
-        transition: background-color 0.3s ease;
+        transition: all 0.3s ease;
       }
 
       .faq-question:hover {
         background: #f8f9fa;
+        transform: translateY(-2px);
       }
+      
       .faq-answer {
         padding: 20px;
-        color: #666;
+        color: #333;
         line-height: 1.7;
         display: none;
+        background: #ffffff;
+        border-top: 1px solid #e9ecef;
       }
 
       /* Responsive Design */
@@ -574,6 +596,37 @@
         .why-choose-content {
           grid-template-columns: 1fr;
           gap: 30px;
+        }
+
+        .why-choose-box {
+          padding: 40px 35px;
+          margin: 0 25px;
+          max-width: 650px;
+        }
+
+        .why-choose h2 {
+          font-size: 1.9rem;
+          margin-bottom: 30px;
+        }
+
+        .why-choose-text {
+          font-size: 1.05rem;
+        }
+
+        .stat-number {
+          font-size: 2rem;
+        }
+
+        .stat-label {
+          font-size: 0.95rem;
+        }
+
+        .stats-grid {
+          gap: 20px;
+        }
+
+        .stat-item {
+          padding: 20px;
         }
 
         .services-grid {
@@ -936,47 +989,49 @@
     <!-- Why Choose Cawarden Section -->
     <section class="why-choose">
       <div class="container">
-        <h2>
-          Why Choose Cawarden Reclaim Brick & Tile Co For Your Reclaimed Bricks?
-        </h2>
-        <div class="why-choose-content">
-          <div class="why-choose-text">
-            <p>
-              At Cawarden Reclaim, we have over 1.5 million reclaimed bricks for
-              sale in our yard in Staffordshire. Our antique bricks consist of
-              handmade, wirecut, pressed, yellow stock and Staffordshire blue
-              options. Simply select the bricks online or use our brick matching
-              service to determine the bricks you need. We have a friendly sales
-              team on hand to take your order and help with any queries you may
-              have. Contact us today!
-            </p>
+        <div class="why-choose-box">
+          <h2>
+            Why Choose Cawarden Reclaim Brick & Tile Co For Your Reclaimed Bricks?
+          </h2>
+          <div class="why-choose-content">
+            <div class="why-choose-text">
+              <p>
+                At Cawarden Reclaim, we have over 1.5 million reclaimed bricks for
+                sale in our yard in Staffordshire. Our antique bricks consist of
+                handmade, wirecut, pressed, yellow stock and Staffordshire blue
+                options. Simply select the bricks online or use our brick matching
+                service to determine the bricks you need. We have a friendly sales
+                team on hand to take your order and help with any queries you may
+                have. Contact us today!
+              </p>
 
-            <p>
-              Cawarden reclaim are a well established company which opened its
-              doors 35 years ago with an 11 acre yard and showroom. We pride
-              ourselves on our knowledgeable staff (the majority of which are
-              still here from when the business first opened its doors), the
-              sustainability, durability, authenticity and quality of our stock.
-              We are trusted by 100,000+ customers and offer nationwide
-              delivery.
-            </p>
-          </div>
-          <div class="stats-grid">
-            <div class="stat-item">
-              <span class="stat-number">1.5M+</span>
-              <div class="stat-label">Reclaimed Bricks in Stock</div>
+              <p>
+                Cawarden reclaim are a well established company which opened its
+                doors 35 years ago with an 11 acre yard and showroom. We pride
+                ourselves on our knowledgeable staff (the majority of which are
+                still here from when the business first opened its doors), the
+                sustainability, durability, authenticity and quality of our stock.
+                We are trusted by 100,000+ customers and offer nationwide
+                delivery.
+              </p>
             </div>
-            <div class="stat-item">
-              <span class="stat-number">100</span>
-              <div class="stat-label">Years Collective Experience</div>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">11</span>
-              <div class="stat-label">Acre Yard</div>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">100K+</span>
-              <div class="stat-label">Trusted Customers</div>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <span class="stat-number">1.5M+</span>
+                <div class="stat-label">Reclaimed Bricks in Stock</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">100</span>
+                <div class="stat-label">Years Collective Experience</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">11</span>
+                <div class="stat-label">Acre Yard</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">100K+</span>
+                <div class="stat-label">Trusted Customers</div>
+              </div>
             </div>
           </div>
         </div>
@@ -1194,22 +1249,22 @@
       <!-- Video Section -->
     <section class="section section-light" style="padding: 60px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
       <div class="container" style="text-align: center">
-        <h2 style="margin-bottom: 30px; font-size: 2.5rem; color: #223422; font-weight: 600;">
-          See Our Reclaimed Bricks in Action
+        <h2 style="margin-bottom: 20px; font-size: 2.2rem; color: #223422; font-weight: 600;">
+          Reclaimed Bricks Explained: Video Library
         </h2>
-        <p style="font-size: 1.2rem; color: #666; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        <p style="font-size: 1.1rem; color: #666; margin-bottom: 40px; max-width: 500px; margin-left: auto; margin-right: auto;">
           Watch how Cawarden Reclaim sources and processes authentic reclaimed bricks for your next project.
         </p>
-        <div style="max-width: 900px; margin: 0 auto">
+        <div style="max-width: 600px; margin: 0 auto">
           <div
             style="
               position: relative;
               padding-bottom: 56.25%;
               height: 0;
               overflow: hidden;
-              border-radius: 16px;
-              box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-              border: 3px solid #58724f;
+              border-radius: 12px;
+              box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+              border: 2px solid #58724f;
             "
           >
             <iframe
@@ -1223,9 +1278,25 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                border-radius: 13px;
+                border-radius: 10px;
               "
             ></iframe>
+          </div>
+          <!-- Video Caption Box -->
+          <div style="
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #58724f;
+          ">
+            <h4 style="color: #223422; font-size: 1.2rem; margin-bottom: 10px; font-weight: 600;">
+              Video Caption Title
+            </h4>
+            <p style="color: #666; font-size: 1rem; line-height: 1.6; margin: 0;">
+              Add your video caption text here. This describes what viewers will see in the video above and provides additional context about Cawarden Reclaim's brick selection process.
+            </p>
           </div>
         </div>
       </div>
