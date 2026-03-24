@@ -1,17 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reclaimed Bricks UK | Cawarden Reclaim Brick & Tile Co</title>
+    <title>Reclaimed Ridge Tiles UK | Cawarden Reclaim Brick & Tile Co</title>
     <meta
       name="description"
-      content="Discover the UK's largest selection of reclaimed bricks at Cawarden Reclaim. Handmade, wirecut, and engineering bricks from historic buildings. Over 1.5 million bricks in stock."
+      content="Discover the UK's largest selection of reclaimed ridge tiles at Cawarden Reclaim. Handmade, wirecut, and engineering ridge tiles from historic buildings. Over 1.5 million ridge tiles in stock."
     />
     <meta
       name="keywords"
-      content="reclaimed bricks, handmade bricks, wirecut bricks, engineering bricks, Victorian bricks, imperial bricks, farmhouse bricks, Cawarden Reclaim"
+      content="reclaimed ridge tiles, handmade ridge tiles, wirecut ridge tiles, engineering ridge tiles, Victorian ridge tiles, imperial ridge tiles, farmhouse ridge tiles, Cawarden Reclaim"
     />
+
     <style>
       * {
         margin: 0;
@@ -32,249 +33,231 @@
         padding: 0 30px;
       }
 
-      /* Header Section */
-      .hero-section {
-        background: url('thumbnail_image019.jpg');
-        background-size: cover;
-        background-position: top;
-        background-attachment: fixed;
-        color: white;
-        padding: 80px 0;
-        text-align: center;
+      /* ── Hero ── */
+      .hero {
+        background: url(RidgeTilesImages/948b4c01-4fae-4d24-aeff-d0524a4b7d77.jpeg)
+          75% 60% / cover no-repeat;
+        min-height: 62vh;
+        display: flex;
+        align-items: stretch;
         position: relative;
         overflow: hidden;
-        min-height: 50vh;
-        display: flex;
-        align-items: center;
       }
-
-      .hero-section::before {
+      .hero::before {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, rgba(45, 40, 35, 0.2) 0%, rgba(75, 65, 55, 0.0) 100%);
-        z-index: 1;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(34, 52, 34, 0.97) 0%,
+          rgba(34, 52, 34, 0.97) 20%,
+          transparent 45%
+        );
       }
-
-      .hero-content {
+      .hero-inner {
         position: relative;
-        z-index: 2;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0 40px;
+        z-index: 1;
+        max-width: 600px;
+        margin-left: 7vw;
+        padding: 80px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
       }
-
-      .hero-section h1 {
-        font-size: 3.5rem;
-        font-weight: 300;
-        margin-bottom: 12px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-        color: #EDEFD7;
-        letter-spacing: 2px;
-      }
-
-      .hero-section h2 {
-        font-size: 2.6rem;
+      .hero-eyebrow {
+        font-size: 0.75rem;
         font-weight: 600;
-        margin-bottom: 24px;
-        color: #E2A825;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        letter-spacing: 3.5px;
+        text-transform: uppercase;
+        color: #e2a825;
+        display: flex;
+        align-items: center;
+        gap: 12px;
       }
-
-      .hero-section p {
-        font-size: 1.3rem;
-        max-width: 650px;
-        margin: 0 auto 35px;
-        opacity: 0.95;
-        line-height: 1.7;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      .hero-eyebrow::before {
+        content: "";
+        width: 32px;
+        height: 2px;
+        background: #e2a825;
+      }
+      .hero h1 {
+        font-size: 3.4rem;
+        font-weight: 700;
+        color: #edefd7;
+        line-height: 1.1;
+      }
+      .hero p {
+        font-size: 1.12rem;
+        color: rgba(237, 239, 215, 0.85);
+        line-height: 1.8;
         font-weight: 300;
+        max-width: 520px;
       }
 
-      .hero-cta {
-        display: inline-block;
-        background: #E2A825;
-        color: white;
-        padding: 18px 40px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-size: 1.1rem;
-        font-weight: 600;
-        margin-top: 25px;
-        transition: all 0.3s ease;
-        border: none;
-        text-transform: none;
-        letter-spacing: 0;
-        box-shadow: 0 4px 12px rgba(226, 168, 37, 0.3);
-      }
-
-      .hero-cta:hover {
-        background: #B8941D;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(226, 168, 37, 0.4);
-      }
-
-      /* Main Content Sections */
+      /* ── Main Content ── */
       .section {
         padding: 50px 0;
       }
-
       .section-light {
         background-color: #ffffff;
       }
-
       .section-dark {
         background-color: #f5f7f2;
       }
 
-      /* Brick Types Grid */
-      .brick-types-grid {
+      /* ── Ridge Tiles Grid ── */
+      .ridge-tiles-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+        margin-top: 40px;
+        background: #f5f7f2;
+        padding: 12px 0;
+      }
+
+      .ridge-tile-card {
+        background: #fff;
+        border-radius: 16px;
+        border: 1px solid rgba(34, 52, 34, 0.09);
+        box-shadow: 0 10px 24px rgba(34, 52, 34, 0.08);
         display: flex;
         flex-direction: column;
-        gap: 40px;
-        margin-top: 30px;
-      }
-
-      .brick-card {
-        background: white;
-        border-radius: 20px;
-        padding: 0;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-        transition: all 0.4s ease;
         overflow: hidden;
-        display: flex;
-        align-items: center;
-        min-height: 400px;
-        position: relative;
-        border: 1px solid rgba(0, 0, 0, 0.04);
+        transition:
+          box-shadow 0.25s ease,
+          transform 0.25s ease;
+        min-height: 100%;
+        width: 100%;
+      }
+      .ridge-tile-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 30px rgba(34, 52, 34, 0.13);
       }
 
-      .brick-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, transparent 0%, rgba(226, 168, 37, 0.03) 100%);
-        pointer-events: none;
-        z-index: 1;
-      }
-
-      .brick-card:nth-child(odd) {
-        flex-direction: row;
-      }
-
-      .brick-card:nth-child(even) {
-        flex-direction: row-reverse;
-      }
-
-      .brick-card:hover {
-        transform: translateY(-12px);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-      }
-
-      .brick-card-image {
-        width: 55%;
-        height: 380px;
+      .ridge-tile-image {
+        width: 100%;
+        height: 210px;
         object-fit: cover;
-        object-position: center;
-        transition: all 0.4s ease;
-        flex-shrink: 0;
-        position: relative;
-        z-index: 2;
+        display: block;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        margin-bottom: 0;
       }
 
-      .brick-card:hover .brick-card-image {
-        transform: scale(1.05);
+      .ridge-tile-overlay {
+        display: none;
       }
 
-      .brick-card-content {
-        width: 45%;
-        padding: 40px;
+      .ridge-tile-label {
+        margin: 18px 18px 8px;
+        font-size: 1.02rem;
+        font-weight: 700;
+        color: #223422;
+        letter-spacing: 0.2px;
+        text-align: left;
+        text-transform: none;
+        position: static;
+        background: none;
+        border: none;
+        padding: 0;
+        line-height: 1.3;
+      }
+      .ridge-tile-label::after {
+        content: "";
+        display: block;
+        width: 36px;
+        height: 3px;
+        background: #e2a825;
+        margin: 8px 0 0;
+        border-radius: 2px;
+      }
+
+      .ridge-tile-description {
+        color: #223422;
+        font-size: 0.95rem;
+        text-align: left;
+        margin: 0 18px 20px;
+        background: none;
+        position: static;
+        padding: 0;
+        opacity: 1;
+        transform: none;
+        transition: none;
+        overflow: visible;
+        flex: 1 1 auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        height: 100%;
-        position: relative;
-        z-index: 2;
-        background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+        justify-content: flex-start;
       }
 
-      .brick-card h3 {
-        color: #223422;
-        font-size: 2.1rem;
+      .ridge-tile-description h3 {
+        font-size: 1rem;
         font-weight: 700;
-        margin-bottom: 18px;
-        line-height: 1.2;
-        text-align: left;
-        position: relative;
-        text-align: center;
+        color: #223422;
+        margin-bottom: 8px;
+        line-height: 1.3;
       }
 
-      .brick-card h3::after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 70px;
-        height: 4px;
-        background: linear-gradient(90deg, #E2A825 0%, #58724f 100%);
-        border-radius: 2px;
-        align-items: center;
-      }
-
-      .brick-card p {
-        color: #555;
-        font-size: 1.05rem;
-        line-height: 1.6;
-        margin-bottom: 25px;
-        flex-grow: 1;
-        font-weight: 400;
-      }
-
-      .cta-button {
-        background: #223422;
-        color: white;
-        padding: 14px 28px;
-        border: none;
-        border-radius: 8px;
+      .ridge-tile-description p {
         font-size: 0.95rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        display: inline-block;
-        text-align: center;
+        line-height: 1.65;
+        color: #444;
+        margin: 0;
+      }
+
+      .ridge-tile-card .ridge-tile-button {
         margin-top: auto;
-        text-transform: none;
-        letter-spacing: 0;
-        box-shadow: 0 2px 8px rgba(34, 52, 34, 0.2);
-        position: relative;
-        overflow: hidden;
-        min-width: 160px;
+        background: #223422;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 24px;
+        font-size: 0.98rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.2s;
+        box-shadow: 0 2px 8px rgba(34,52,34,0.10);
       }
-
-      .cta-button:hover {
+      .ridge-tile-card .ridge-tile-button:hover {
         background: #2d4a2d;
-        transform: translateY(-1px);
-        box-shadow: 0 4px 15px rgba(34, 52, 34, 0.3);
       }
 
-      /* Why Choose Section */
+      @media (max-width: 1024px) {
+        .ridge-tiles-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 20px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .ridge-tiles-grid {
+          grid-template-columns: 1fr;
+          gap: 18px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .ridge-tiles-grid {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+          gap: 16px;
+        }
+        .ridge-tile-image {
+          height: 200px;
+        }
+        .ridge-tile-description {
+          margin: 0 16px 18px;
+        }
+      }
+
+      /* ── Why Choose ── */
       .why-choose {
         background: #f5f7f2;
-        color: #333;
         padding: 35px 0;
         display: flex;
         justify-content: center;
         align-items: center;
       }
-
       .why-choose-box {
         background: linear-gradient(135deg, #223422 0%, #58724f 100%);
         color: white;
@@ -285,7 +268,6 @@
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
         border: 2px solid rgba(226, 168, 37, 0.2);
       }
-
       .why-choose h2 {
         text-align: center;
         font-size: 2.2rem;
@@ -294,41 +276,20 @@
         line-height: 1.3;
         font-weight: 600;
       }
-
       .why-choose-content {
         display: grid;
         gap: 40px;
         align-items: center;
       }
-
       .why-choose-text {
         font-size: 1.05rem;
         line-height: 1.7;
       }
-
       .why-choose-text p {
         margin-bottom: 20px;
       }
 
-      .stat-item {
-        text-align: center;
-        padding: 25px;
-        background: rgba(237, 239, 215, 0.1);
-        border-radius: 12px;
-        border: 1px solid rgba(226, 168, 37, 0.3);
-      }
-      .stat-number {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #e2a825;
-        display: block;
-      }
-      .stat-label {
-        font-size: 1rem;
-        opacity: 0.9;
-        margin-top: 10px;
-      }
-
+      /* ── Services ── */
       /* Services Grid */
       .services-grid {
         display: grid;
@@ -342,7 +303,9 @@
         border-radius: 16px;
         padding: 0;
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
         overflow: hidden;
         min-height: 560px;
         display: flex;
@@ -397,7 +360,30 @@
         flex-grow: 1;
       }
 
-      /* Reviews Section */
+      /* ── CTA Button ── */
+      .cta-button {
+        background: #223422;
+        color: white;
+        padding: 14px 28px;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(34, 52, 34, 0.2);
+        min-width: 160px;
+      }
+      .cta-button:hover {
+        background: #2d4a2d;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 15px rgba(34, 52, 34, 0.3);
+      }
+
+      /* ── Reviews ── */
       .reviews-section {
         background: linear-gradient(135deg, #506a72 0%, #3d5359 100%);
         padding: 50px 0;
@@ -406,31 +392,27 @@
         position: relative;
         overflow: hidden;
       }
-
       .reviews-section::before {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at 70% 30%, rgba(226, 168, 37, 0.08) 0%, transparent 50%);
+        inset: 0;
+        background: radial-gradient(
+          circle at 70% 30%,
+          rgba(226, 168, 37, 0.08) 0%,
+          transparent 50%
+        );
         z-index: 1;
       }
-
       .reviews-section .container {
         position: relative;
         z-index: 2;
       }
-
       .reviews-section .section-header h2 {
         color: #edefd7;
         font-size: 2.2rem;
         margin-bottom: 15px;
         font-weight: 600;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       }
-
       .reviews-section .section-header p {
         font-size: 1.1rem;
         color: #edefd7;
@@ -439,14 +421,12 @@
         opacity: 0.95;
         font-weight: 300;
       }
-
       .reviews-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 25px;
         margin-top: 30px;
       }
-
       .review-card {
         background: rgba(255, 255, 255, 0.98);
         color: #333;
@@ -457,9 +437,7 @@
         transition: all 0.3s ease;
         border: 1px solid rgba(226, 168, 37, 0.15);
         position: relative;
-        backdrop-filter: blur(10px);
       }
-
       .review-card::before {
         content: "";
         position: absolute;
@@ -470,21 +448,16 @@
         background: linear-gradient(90deg, #e2a825 0%, #58724f 100%);
         border-radius: 12px 12px 0 0;
       }
-
       .review-card:hover {
         transform: translateY(-3px);
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-        background: rgba(255, 255, 255, 1);
       }
-
       .review-stars {
         color: #e2a825;
         font-size: 1.1rem;
         margin-bottom: 12px;
         font-weight: bold;
-        text-shadow: 1px 1px 2px rgba(226, 168, 37, 0.3);
       }
-
       .review-text {
         font-size: 0.95rem;
         line-height: 1.5;
@@ -494,7 +467,6 @@
         position: relative;
         padding-left: 12px;
       }
-
       .review-text::before {
         content: '"';
         position: absolute;
@@ -506,7 +478,6 @@
         font-family: serif;
         line-height: 1;
       }
-
       .review-author {
         color: #58724f;
         font-weight: 700;
@@ -515,7 +486,6 @@
         position: relative;
         padding-top: 8px;
       }
-
       .review-author::before {
         content: "";
         position: absolute;
@@ -525,18 +495,112 @@
         height: 2px;
         background: linear-gradient(90deg, transparent 0%, #e2a825 100%);
       }
-
       .stars {
         font-size: 1.8rem;
         color: #e2a825;
         margin-bottom: 15px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        filter: drop-shadow(0 0 8px rgba(226, 168, 37, 0.3));
       }
 
-      /* Contact Banner Section */
+      /* ── Projects CTA ── */
+      .projects-section {
+        background: linear-gradient(145deg, #e7ede3 0%, #dde6d9 100%);
+        padding: 56px 0;
+      }
+      .projects-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+        background: #f7f9f4;
+        border: 1px solid rgba(34, 52, 34, 0.08);
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 18px 40px rgba(27, 40, 27, 0.12);
+        position: relative;
+      }
+      .projects-layout::before {
+        content: "";
+        position: absolute;
+        top: -120px;
+        right: -120px;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(226, 168, 37, 0.15) 0%,
+          rgba(226, 168, 37, 0) 70%
+        );
+        pointer-events: none;
+      }
+      .projects-media {
+        position: relative;
+        min-height: 320px;
+        padding: 24px;
+        background: #cfdacb;
+      }
+      .projects-media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          130deg,
+          rgba(34, 52, 34, 0.18) 0%,
+          rgba(34, 52, 34, 0.02) 55%,
+          rgba(226, 168, 37, 0.16) 100%
+        );
+      }
+      .projects-media img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        display: block;
+        border-radius: 12px;
+        position: relative;
+        z-index: 1;
+      }
+      .projects-content {
+        padding: 36px 40px 34px;
+        position: relative;
+        z-index: 1;
+      }
+      .projects-eyebrow {
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        font-size: 0.74rem;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        color: #5f7759;
+        background: rgba(95, 119, 89, 0.11);
+        border-radius: 999px;
+        font-weight: 700;
+      }
+      .projects-content h2 {
+        color: #223422;
+        font-size: 2.05rem;
+        margin-bottom: 14px;
+        line-height: 1.25;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+      .projects-content p {
+        color: #465344;
+        font-size: 1rem;
+        line-height: 1.72;
+        margin: 0 0 12px;
+      }
+      .projects-content .cta-button {
+        margin-top: 12px;
+        border-radius: 999px;
+        padding: 13px 24px;
+        letter-spacing: 0.2px;
+        box-shadow: 0 8px 18px rgba(34, 52, 34, 0.22);
+      }
+
+      /* ── Contact Banner ── */
       .contact-banner {
-        background: url('banner.jpg');
+        background: url("RidgeTilesImages/6ca73345-6196-4921-adad-f1a25b56a433.jpeg");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -547,28 +611,26 @@
         display: flex;
         align-items: center;
       }
-
       .contact-banner .container {
         position: relative;
         z-index: 2;
         text-align: center;
       }
-
       .banner-text {
         max-width: 900px;
         margin: 0 auto;
         color: white;
       }
-
       .banner-text h2 {
         color: white;
         font-size: 2.8rem;
         font-weight: 700;
         margin-bottom: 40px;
         line-height: 1.3;
-        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9), 2px 2px 4px rgba(0, 0, 0, 0.8);
+        text-shadow:
+          4px 4px 8px rgba(0, 0, 0, 0.9),
+          2px 2px 4px rgba(0, 0, 0, 0.8);
       }
-
       .contact-info {
         display: flex;
         justify-content: center;
@@ -577,98 +639,41 @@
         align-items: center;
         flex-direction: column;
       }
-
       .contact-item {
         color: white;
         text-align: center;
       }
-
       .contact-label {
         font-weight: 600;
         color: white;
         font-size: 1.2rem;
-        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), 1px 1px 3px rgba(0, 0, 0, 0.8);
+        text-shadow:
+          3px 3px 6px rgba(0, 0, 0, 0.9),
+          1px 1px 3px rgba(0, 0, 0, 0.8);
         margin-bottom: 8px;
         display: block;
       }
-
       .contact-link {
         color: white;
         text-decoration: none;
         font-size: 1.4rem;
         font-weight: 700;
         transition: all 0.3s ease;
-        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), 1px 1px 3px rgba(0, 0, 0, 0.8);
+        text-shadow:
+          3px 3px 6px rgba(0, 0, 0, 0.9),
+          1px 1px 3px rgba(0, 0, 0, 0.8);
         display: block;
       }
-
       .contact-link:hover {
         color: #ffffff;
       }
 
-      /* Video Grid Styles */
-      .video-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 40px;
-        max-width: 1100px;
-        margin: 0 auto;
-      }
 
-      .video-card {
-        background: white;
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid rgba(0, 0, 0, 0.04);
-      }
-
-      .video-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-      }
-
-      .video-wrapper {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-      }
-
-      .video-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-      .video-info {
-        padding: 25px;
-      }
-
-      .video-title {
-        color: #223422;
-        font-size: 1.2rem;
-        margin-bottom: 12px;
-        font-weight: 600;
-        line-height: 1.3;
-      }
-
-      .video-description {
-        color: #666;
-        font-size: 0.95rem;
-        line-height: 1.6;
-        margin: 0;
-      }
-
-      /* Section Headers */
+      /* ── Section Headers ── */
       .section-header {
         text-align: center;
         margin-bottom: 40px;
       }
-
       .section-header h2 {
         color: #223422;
         font-size: 2.5rem;
@@ -683,12 +688,11 @@
         line-height: 1.5;
       }
 
-      /* FAQ Section */
+      /* ── FAQ ── */
       .faq-section {
         background: #f8f9fa;
         padding: 50px 0;
       }
-
       .faq-grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -698,7 +702,6 @@
         margin-left: auto;
         margin-right: auto;
       }
-
       .faq-item {
         border: 1px solid #e9ecef;
         border-radius: 8px;
@@ -708,12 +711,10 @@
         background: #ffffff;
         transition: all 0.3s ease;
       }
-
       .faq-item:hover {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         transform: translateY(-1px);
       }
-
       .faq-question {
         background: #ffffff;
         padding: 15px 20px;
@@ -730,23 +731,21 @@
         justify-content: space-between;
         align-items: center;
       }
-
       .faq-question::after {
-        content: '▼';
+        content: "▼";
         font-size: 0.9rem;
         color: #666;
         transition: transform 0.3s ease;
+        flex-shrink: 0;
+        margin-left: 12px;
       }
-
       .faq-question.active::after {
         transform: rotate(180deg);
       }
-
       .faq-question:hover {
         background: #f8f9fa;
-        color: #8B4513;
+        color: #8b4513;
       }
-      
       .faq-answer {
         padding: 15px 20px;
         color: #555;
@@ -757,753 +756,291 @@
         font-size: 1rem;
       }
 
-      /* Responsive Design */
+      /* ── Responsive ── */
       @media (max-width: 1024px) {
-        .brick-types-grid {
-          gap: 40px;
+        .ridge-tiles-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 22px;
         }
-        
-        .brick-card {
-          min-height: 350px;
-        }
-
-        .brick-card-image {
-          height: 350px;
-        }
-
-        .brick-card-content {
-          padding: 40px;
-        }
-
-        .brick-card h3 {
-          font-size: 2rem;
-        }
-        
         .services-grid {
           grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-          gap: 30px;
-        }
-        
-        .hero-section {
-          padding: 50px 0;
-          min-height: 35vh;
-          background-attachment: scroll;
-        }
-        
-        .hero-content {
-          padding: 30px 25px;
-        }
-        
-        .hero-section h1 {
-          font-size: 2.8rem;
-        }
-        
-        .hero-section h2 {
-          font-size: 2rem;
-        }
-
-        .hero-section p {
-          font-size: 1.1rem;
-        }
-
-        .hero-cta {
-          padding: 14px 28px;
-          font-size: 1rem;
         }
       }
 
       @media (max-width: 768px) {
-        .hero-section {
-          padding: 20px 0;
-          min-height: 30vh;
+        .hero-inner {
+          padding: 50px 25px;
+          margin-left: 4vw;
         }
-        
-        .hero-content {
-          padding: 15px 20px;
-        }
-        
-        .hero-section h1 {
+        .hero h1 {
           font-size: 2.4rem;
         }
-
-        .hero-section h2 {
-          font-size: 1.7rem;
-        }
-
-        .hero-section p {
+        .hero p {
           font-size: 1rem;
         }
-
-        .hero-cta {
-          padding: 12px 24px;
-          font-size: 0.95rem;
+        .ridge-tiles-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 18px;
         }
-
-        .brick-types-grid {
-          gap: 35px;
-        }
-
-        .brick-card {
-          flex-direction: column !important;
-          min-height: auto;
-          border-radius: 16px;
-        }
-
-        .brick-card-image {
-          width: 100%;
-          height: 280px;
-        }
-
-        .brick-card-content {
-          width: 100%;
-          padding: 35px;
-          background: white;
-        }
-
-        .brick-card h3 {
-          font-size: 1.8rem;
-          text-align: center;
-          margin-bottom: 18px;
-        }
-
-        .brick-card h3::after {
-          left: 50%;
-          transform: translateX(-50%);
-        }
-
-        .brick-card p {
-          font-size: 1rem;
-          text-align: center;
-        }
-
-        .cta-button {
-          align-self: center;
-          padding: 14px 28px;
-        }
-
-        .why-choose-content {
-          grid-template-columns: 1fr;
-          gap: 20px;
-        }
-
-        .why-choose-box {
-          padding: 30px 25px;
-          margin: 0 25px;
-          max-width: 650px;
-        }
-
-        .why-choose h2 {
-          font-size: 1.7rem;
-          margin-bottom: 20px;
-        }
-
-        .why-choose-text {
-          font-size: 0.95rem;
-        }
-
-        .why-choose-text p {
-          margin-bottom: 14px;
-        }
-
-        .stat-number {
-          font-size: 2rem;
-        }
-
-        .stat-label {
-          font-size: 0.95rem;
-        }
-
-        .stats-grid {
-          gap: 20px;
-        }
-
-        .stat-item {
-          padding: 20px;
-        }
-
-        .stats-compact {
-          margin-left: 0;
-          margin-top: 15px;
-          gap: 6px;
-        }
-
-        .stat-number-compact {
-          font-size: 1.1rem;
-          min-width: 50px;
-        }
-
-        .stat-label-compact {
-          font-size: 0.8rem;
-        }
-
         .services-grid {
           grid-template-columns: 1fr;
-          gap: 25px;
         }
-
         .service-card {
           min-height: 480px;
         }
-
-        .service-card-content {
-          padding: 28px;
+        .why-choose-box {
+          padding: 30px 25px;
+          margin: 0 15px;
         }
-
-        .service-card-image {
-          height: 240px;
+        .why-choose h2 {
+          font-size: 1.8rem;
         }
-
-        .service-card h3 {
-          font-size: 1.5rem;
-          margin-bottom: 14px;
+        .contact-banner {
+          background-attachment: scroll;
         }
-
-        .service-card p {
-          font-size: 0.95rem;
-          line-height: 1.5;
-          margin-bottom: 18px;
+        .banner-text h2 {
+          font-size: 2rem;
         }
-
-        .stats-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
-        }
-
-        .stats-compact {
-          margin-left: 0;
-          margin-top: 15px;
-          gap: 8px;
-        }
-
-        .stat-number-compact {
-          font-size: 1.1rem;
-          min-width: 50px;
-        }
-
-        .stat-label-compact {
-          font-size: 0.8rem;
-        }
-
         .container {
           padding: 0 15px;
         }
-        
-        .brick-card,
-        .service-card {
-          min-height: 480px;
-        }
-
-        .brick-card-content {
-          padding: 28px;
-        }
-
-        .brick-card-image {
-          height: 240px;
-        }
-
-        .brick-card h3 {
-          font-size: 1.5rem;
-          margin-bottom: 14px;
-        }
-
-        .brick-card p {
-          font-size: 0.95rem;
-          line-height: 1.5;
-          margin-bottom: 20px;
-        }
-
-        .brick-card-image {
-          height: 200px;
-        }
-
-        .brick-card h3 {
-          font-size: 1.8rem;
-        }
-
-        .brick-card p {
-          font-size: 1.1rem;
-        }
-        
         .section {
           padding: 40px 0;
         }
-        
-        .faq-section {
-          padding: 50px 0;
-        }
-        
-        .reviews-section {
-          padding: 40px 0;
-        }
-
-        .reviews-section .section-header h2 {
-          font-size: 2.1rem;
-        }
-
-        .reviews-section .section-header p {
-          font-size: 1.1rem;
-          margin-bottom: 30px;
-        }
-
-        .reviews-grid {
+        .projects-layout {
           grid-template-columns: 1fr;
-          gap: 20px;
-          margin-top: 25px;
         }
-
-        .review-card {
-          padding: 25px;
-          margin: 0;
-          border-radius: 10px;
+        .projects-media {
+          min-height: 0;
+          padding: 16px;
         }
-
-        .review-stars {
-          font-size: 1.2rem;
-          margin-bottom: 12px;
+        .projects-content {
+          padding: 28px 24px 30px;
         }
-
-        .review-text {
-          font-size: 0.95rem;
-          line-height: 1.5;
-          margin-bottom: 15px;
-          padding-left: 12px;
-        }
-
-        .review-text::before {
-          font-size: 2rem;
-          top: -2px;
-        }
-
-        .review-author {
-          font-size: 0.9rem;
-          padding-top: 8px;
-        }
-
-        .review-author::before {
-          width: 40px;
-        }
-        
-        .section-header h2 {
-          font-size: 2.2rem;
-        }
-        
-        .section-header p {
-          font-size: 1.1rem;
-        }
-        
-        .stat-number {
-          font-size: 2.2rem;
-        }
-
-        .card-title {
-          font-size: 1.4rem;
-        }
-
-        .card-description {
-          font-size: 1rem;
-        }
-
-        .contact-banner {
-          padding: 80px 0;
-          background-attachment: scroll;
-          min-height: 55vh;
-        }
-
-        .banner-text h2 {
-          font-size: 2rem;
-          margin-bottom: 30px;
-        }
-
-        .contact-info {
-          gap: 40px;
-        }
-
-        .contact-item {
-          padding: 25px;
-        }
-
-        .contact-label {
-          font-size: 1.1rem;
-        }
-
-        .contact-link {
-          font-size: 1.3rem;
-        }
-
-        .video-grid {
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 25px;
-        }
-
-        .video-info {
-          padding: 18px;
-        }
-
-        .video-title {
-          font-size: 1rem;
-        }
-
-        .video-description {
-          font-size: 0.85rem;
-        }
-      }
-
-      @media (max-width: 600px) {
-        .brick-types-grid {
-          grid-template-columns: 1fr !important;
-          gap: 25px;
-        }
-
-        .reviews-grid {
-          grid-template-columns: 1fr !important;
-          gap: 20px;
+        .projects-content h2 {
+          font-size: 1.7rem;
         }
       }
 
       @media (max-width: 480px) {
-        .hero-section {
-          padding: 10px 0;
-          min-height: 25vh;
-        }
-        
-        .hero-content {
-          padding: 10px 15px;
-        }
-        
-        .hero-section h1 {
+        .hero h1 {
           font-size: 2rem;
         }
-        
-        .hero-section h2 {
-          font-size: 1.4rem;
-        }
-        
-        .hero-section p {
-          font-size: 0.95rem;
-        }
-
-        .hero-cta {
-          padding: 10px 18px;
-          font-size: 0.85rem;
-        }
-        
-        .brick-types-grid {
+        .ridge-tiles-grid {
           grid-template-columns: 1fr;
-          gap: 25px;
+          gap: 16px;
         }
-        
-        .brick-card,
-        .service-card {
-          min-height: 440px;
-          margin: 0 5px;
-        }
-
-        .brick-card-content,
-        .service-card-content {
-          padding: 24px;
-        }
-
-        .brick-card-image,
-        .service-card-image {
-          height: 200px;
-        }
-
-        .brick-card h3,
-        .service-card h3 {
-          font-size: 1.3rem;
-          margin-bottom: 12px;
-        }
-
-        .brick-card p,
-        .service-card p {
-          font-size: 0.9rem;
-          line-height: 1.4;
-          margin-bottom: 18px;
-        }
-
-        .cta-button {
-          padding: 14px 30px;
+        .ridge-tile-label {
           font-size: 1rem;
-          border-radius: 8px;
         }
-        
-        .section {
-          padding: 30px 0;
-        }
-        
-        .faq-section {
-          padding: 35px 0;
-        }
-        
-        .reviews-section {
-          padding: 30px 0;
-        }
-
-        .reviews-section .section-header h2 {
-          font-size: 1.7rem;
-        }
-
-        .reviews-section .section-header p {
-          font-size: 1rem;
-          margin-bottom: 25px;
-        }
-
-        .reviews-grid {
-          gap: 18px;
-          margin-top: 20px;
-        }
-
-        .review-card {
-          padding: 22px;
-          margin: 0;
-          border-radius: 10px;
-        }
-
-        .review-stars {
-          font-size: 1.1rem;
-          margin-bottom: 10px;
-        }
-
-        .review-text {
-          font-size: 0.9rem;
-          line-height: 1.4;
-          margin-bottom: 12px;
-          padding-left: 10px;
-        }
-
-        .review-text::before {
-          font-size: 1.8rem;
-          top: -1px;
-        }
-
-        .review-author {
-          font-size: 0.85rem;
-          padding-top: 6px;
-        }
-
-        .review-author::before {
-          width: 30px;
-        }
-        
         .section-header h2 {
           font-size: 1.8rem;
         }
-        
-        .section-header p {
-          font-size: 0.95rem;
+        .banner-text h2 {
+          font-size: 1.6rem;
         }
-        
-        .stat-number {
-          font-size: 1.8rem;
-        }
-
-        .stats-grid {
-          grid-template-columns: 1fr;
-          gap: 15px;
-        }
-
-        .stats-compact {
-          margin-left: 0;
-          margin-top: 15px;
-          gap: 6px;
-          align-items: center;
-        }
-
-        .stat-compact {
-          justify-content: space-between;
-          padding: 6px 0;
-        }
-
-        .stat-number-compact {
-          font-size: 1rem;
-          min-width: 45px;
-        }
-
-        .stat-label-compact {
-          font-size: 0.75rem;
-        }
-
-        .container {
-          padding: 0 12px;
-        }
-
-        .card-title {
-          font-size: 1.2rem;
-        }
-
-        .card-description {
-          font-size: 0.95rem;
-        }
-
-        .cta-button {
-          padding: 10px 20px;
-          font-size: 0.9rem;
-        }
-
         .contact-banner {
           padding: 70px 0;
           min-height: 50vh;
         }
-
-        .banner-text h2 {
-          font-size: 1.6rem;
-          margin-bottom: 25px;
-        }
-
-        .contact-info {
-          gap: 25px;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .contact-item {
-          padding: 20px;
-          min-width: 250px;
-        }
-
-        .contact-label {
-          font-size: 1rem;
-        }
-
-        .contact-link {
-          font-size: 1.2rem;
-        }
-
-        .video-grid {
-          grid-template-columns: 1fr;
-          gap: 20px;
-        }
-
-        .video-info {
-          padding: 15px;
-        }
-
-        .video-title {
-          font-size: 0.95rem;
-        }
-
-        .video-description {
-          font-size: 0.8rem;
-        }
-      }
-
-      @media (max-width: 360px) {
-        .hero-section h1 {
-          font-size: 1.6rem;
-        }
-        
-        .hero-section h2 {
-          font-size: 1.1rem;
-        }
-        
-        .section-header h2 {
-          font-size: 1.5rem;
-        }
-        
-        .brick-types-grid {
-          grid-template-columns: 1fr;
-          gap: 25px;
-          padding: 0 10px;
-        }
-        
-        .brick-card,
-        .service-card {
-          padding: 30px 25px;
-          min-height: 420px;
-          margin: 0;
-          border-radius: 15px;
-          box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        .brick-card-image {
-          height: 200px;
-          margin-bottom: 20px;
-          border-radius: 10px;
-        }
-
-        .brick-card h3 {
-          font-size: 1.6rem;
-          margin-bottom: 15px;
-          text-align: center;
-          width: 100%;
-          display: block;
-        }
-
-        .brick-card p {
-          font-size: 1.05rem;
-          line-height: 1.6;
-          margin-bottom: 25px;
-        }
-
-        .cta-button {
-          padding: 15px 30px;
-          font-size: 1rem;
-          width: 100%;
-          border-radius: 8px;
+        .projects-content p {
+          font-size: 0.98rem;
         }
       }
     </style>
   </head>
   <body>
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container">
-        <div class="hero-content">
-          <h1>Our Range</h1>
-          <h2>Reclaimed Bricks</h2>
-          <p>
-            Discover the UK's largest selection of reclaimed bricks at Cawarden
-            Reclaim. Sourced from historic buildings to promote sustainability
-            and add unmatched character and durability to your project.
-          </p>
-          <a href="#brick-types" class="hero-cta">Browse Stock</a>
-        </div>
+    <!-- ═══ HERO ═══ -->
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-eyebrow">UK's Largest Stock</div>
+        <h1>Reclaimed Ridge Tiles</h1>
+        <p>
+          Cawarden are a leading provider of an impressive range of reclaimed
+          ridge tiles. These old ridge tiles are available in a range of
+          materials such as clay, terracotta, concrete and solid stone. Our vast
+          stock of over 250,000 consists of interlocking, butt up, half round,
+          hoggs back, saddle back and decorative ornate ridge tiles. Worldwide
+          delivery available. Browse our stock below.
+        </p>
+        <a href="#ridge-tiles" class="cta-button">Browse Stock</a>
       </div>
-    </section>
+    </header>
 
-    <!-- Main Brick Types Section -->
+    <!-- Ridge Tiles Grid Section -->
     <section class="section section-light" id="brick-types">
-      <div class="container">
-        <div class="brick-types-grid">
-          <!-- Handmade Bricks -->
-          <div class="brick-card">
-            <img src="bricks/Img1.jpg" alt="Reclaimed Handmade Bricks" class="brick-card-image">
-            <div class="brick-card-content">
-              <h3>Handmade Bricks</h3>
+      <div class="container" id="ridge-tiles">
+        <div class="section-header">
+          <h2>Our Reclaimed Ridge Tile Range</h2>
+          <p>Over 250,000 ridge tiles in stock — browse by type below</p>
+        </div>
+        <div class="ridge-tiles-grid">
+          <!-- Butt Up -->
+          <div class="ridge-tile-card">
+            <img
+              src="RidgeTilesImages/124be881-bdc6-4495-99d1-8eef8fd74fb5.jpeg"
+              alt="Butt Up Ridge Tiles"
+              class="ridge-tile-image"
+            />
+            <div class="ridge-tile-overlay"></div>
+            <div class="ridge-tile-label">Butt Up</div>
+            <div class="ridge-tile-description">
               <p>
-                These bricks were made by skilled craftsmen creating unique
-                character and shapes. They will give a traditional rustic feel to
-                your build. Explore our range today.
+                Reclaimed butt up ridge tiles are traditional roofing tiles that
+                were first introduced in the 1870s. These old ridge tiles are
+                designed to "butt up" alongside each other and are normally
+                joined together using mortar. Made from materials such as clay
+                or concrete, they provide durability and authentic character
+                making them perfect for restoration projects. Browse our stock
+                today.
               </p>
-              <a href="#" class="cta-button">Browse Stock</a>
             </div>
           </div>
 
-          <!-- Wirecut Bricks -->
-          <div class="brick-card">
-            <img src="bricks/img2.jpg" alt="Reclaimed Wirecut Bricks" class="brick-card-image">
-            <div class="brick-card-content">
-              <h3>Wirecut Bricks</h3>
+          <!-- Interlock -->
+          <div class="ridge-tile-card">
+            <img
+              src="RidgeTilesImages/40beac7e-d2a7-49a3-9320-4dafeba4414e.jpeg"
+              alt="Interlock Ridge Tiles"
+              class="ridge-tile-image"
+            />
+            <div class="ridge-tile-overlay"></div>
+            <div class="ridge-tile-label">Interlock</div>
+            <div class="ridge-tile-description">
               <p>
-                These bricks were cut using wire to create a more uniform finish
-                while keeping some classical characteristics of handmade bricks.
-                Browse our stock today.
+                Interlocking Ridge Tiles are original reclaimed roof tiles that
+                provide a secure, weatherproof roof finish. Introduced over 200
+                years ago in clay, they can be handmade or machine made, with an
+                interlocking design allowing faster installation. The concrete
+                versions were introduced in the 1920s to offer a more
+                cost-effective and durable option. Browse our stock today.
               </p>
-              <a href="#" class="cta-button">Browse Stock</a>
             </div>
           </div>
 
-          <!-- Engineering Bricks -->
-          <div class="brick-card">
-            <img src="Images-2.jpg" alt="Engineering Pressed Facing Bricks" class="brick-card-image">
-            <div class="brick-card-content">
-              <h3>Engineering, Pressed & Facing Bricks</h3>
+          <!-- Half Round -->
+          <div class="ridge-tile-card">
+            <img
+              src="RidgeTilesImages/4b444fb5-4ca7-4c45-be2b-547383e767e0.jpeg"
+              alt="Half Round Ridge Tiles"
+              class="ridge-tile-image"
+            />
+            <div class="ridge-tile-overlay"></div>
+            <div class="ridge-tile-label">Half Round</div>
+            <div class="ridge-tile-description">
               <p>
-                These bricks are a much denser brick often used for structural
-                integrity for footings, and foundations. These bricks are
-                generally Staffordshire Blue or Red. View our stock today.
+                Half round ridge tiles became popular in the early 1600s and are
+                traditionally fitted using mortar. Available in clay, concrete
+                or terracotta they come in sand faced or smooth finishes,
+                offering a classical look to your traditional roofing project.
+                These ridge tiles were the most commonly used ridge tiles during
+                the 19th century. Browse our stock today.
               </p>
-              <a href="#" class="cta-button">Browse Stock</a>
+            </div>
+          </div>
+
+          <!-- Hoggs -->
+          <div class="ridge-tile-card">
+            <img
+              src="RidgeTilesImages/5ba8ca20-6f5c-4b51-a938-d5dcfa564286.jpeg"
+              alt="Hoggs Back Ridge Tiles"
+              class="ridge-tile-image"
+            />
+            <div class="ridge-tile-overlay"></div>
+            <div class="ridge-tile-label">Hoggs Back</div>
+            <div class="ridge-tile-description">
+              <p>
+                Reclaimed hogs back ridge tiles are used to cap the apex of a
+                roof, they date back to the early 1600s where they were
+                typically handmade by being bent over the knee to achieve their
+                distinctive angle. Available in interlocking and butt-up designs
+                and colours including red and Staffordshire blue. Browse our
+                stock today!
+              </p>
+            </div>
+          </div>
+
+          <!-- Saddle -->
+          <div class="ridge-tile-card">
+            <img
+              src="RidgeTilesImages/5e466f19-364d-40f2-9dcc-9a4e9c0cf791.jpeg"
+              alt="Saddleback Ridge Tiles"
+              class="ridge-tile-image"
+            />
+            <div class="ridge-tile-overlay"></div>
+            <div class="ridge-tile-label">Saddleback</div>
+            <div class="ridge-tile-description">
+              <p>
+                Reclaimed saddle back ridge tiles are named because their shape
+                which resembles a saddle. They are available in interlocking and
+                butt up styles and are normally made from terracotta, clay or
+                concrete. Old saddleback ridge tiles were most popular in the UK
+                in the 18th century, traditionally handmade by being bent over
+                the knee or moulded in wooden moulds. Browse our stock today.
+              </p>
+            </div>
+          </div>
+
+          <!-- Fancy/Decorative -->
+          <div class="ridge-tile-card">
+            <img
+              src="RidgeTilesImages/5f252460-e36d-476b-9e24-cadb73b59a7d.jpeg"
+              alt="Decorative Ridge Tiles"
+              class="ridge-tile-image"
+            />
+            <div class="ridge-tile-overlay"></div>
+            <div class="ridge-tile-label">Decorative</div>
+            <div class="ridge-tile-description">
+              <p>
+                Reclaimed decorative ridge tiles come in designs like crested,
+                clover leaf, cocks comb, roll top and club. Typically made from
+                terracotta or clay, pre-1870s they were handmade and moulded by
+                hand. After the industrial revolution the majority were machine
+                made for mass production. Browse our stock today.
+              </p>
+            </div>
+          </div>
+
+          <!-- Finials -->
+          <div class="ridge-tile-card">
+            <img
+              src="RidgeTilesImages/6ca73345-6196-4921-adad-f1a25b56a433.jpeg"
+              alt="Roof Finials"
+              class="ridge-tile-image"
+            />
+            <div class="ridge-tile-overlay"></div>
+            <div class="ridge-tile-label">Finials</div>
+            <div class="ridge-tile-description">
+              <p>
+                Reclaimed roof finials are traditionally used at the very end of
+                the roof apex to add a finishing touch and character. Typically
+                made from terracotta or solid stone, they were extremely popular
+                during the Victorian and Edwardian eras. Common styles include
+                fleur-de-lys, scrolls, spheres and mythical creatures such as
+                dragons, gargoyles and griffins. Browse our stock below.
+              </p>
+            </div>
+          </div>
+
+          <!-- Vented -->
+          <div class="ridge-tile-card">
+            <img
+              src="RidgeTilesImages/948b4c01-4fae-4d24-aeff-d0524a4b7d77.jpeg"
+              alt="Vented Ridge Tiles"
+              class="ridge-tile-image"
+            />
+            <div class="ridge-tile-overlay"></div>
+            <div class="ridge-tile-label">Vented</div>
+            <div class="ridge-tile-description">
+              <p>
+                Reclaimed vented ridge tiles are made from clay or terracotta
+                and were used to improve airflow in buildings. Commonly
+                installed on farm buildings over 200 years ago to reduce the
+                risk of diseases in animals, first used in the UK in the early
+                1800s. These tiles allowed warm stale air to escape while
+                keeping out rain, improving conditions for livestock and
+                maintaining healthier environments.
+              </p>
             </div>
           </div>
         </div>
@@ -1514,29 +1051,29 @@
     <section class="why-choose">
       <div class="container">
         <div class="why-choose-box">
-          <h2>
-            Why Choose Cawarden Reclaim Brick & Tile Co For Your Reclaimed Bricks?
-          </h2>
+          <h2>Why choose Cawarden reclaim for your reclaimed ridge tiles?</h2>
           <div class="why-choose-content">
             <div class="why-choose-text">
               <p>
-                At Cawarden Reclaim, we have over 1.5 million reclaimed bricks for
-                sale in our yard in Staffordshire. Our antique bricks consist of
-                handmade, wirecut, pressed, yellow stock and Staffordshire blue
-                options. Simply select the bricks online or use our brick matching
-                service to determine the bricks you need. We have a friendly sales
-                team on hand to take your order and help with any queries you may
-                have. Contact us today!
+                At Cawarden Reclaim we stock an extensive range of reclaimed
+                ridge tiles to suit every roof style. Our collection includes
+                traditional butt up, interlocking, half round, hogsback,
+                saddleback, fancy and vented ridge tiles, as well as roof
+                finials. Each tile is carefully reclaimed to preserve its
+                original character and quality and with over 250,000 ridge tiles
+                available you are sure to find the perfect match for your
+                project.
               </p>
-
               <p>
-                Cawarden reclaim are a well established company which opened its
-                doors 35 years ago with an 11 acre yard and showroom. We pride
-                ourselves on our knowledgeable staff (the majority of which are
-                still here from when the business first opened its doors), the
-                sustainability, durability, authenticity and quality of our stock.
-                We are trusted by 100,000+ customers and offer nationwide
-                delivery.
+                For more than 35 years Cawarden Reclaim has been serving
+                homeowners and the roofing trade from our 11-acre yard and
+                showroom in Staffordshire. With over 100 years of combined
+                expertise, our knowledgeable team can guide you to the most
+                suitable and durable reclaimed ridge tiles for your roof. We
+                pride ourselves on being the largest reclaim yard in the UK, our
+                sustainability, premium quality materials, and exceptional
+                service, earning a 4.8 Google rating and the trust of over
+                100,000 customers.
               </p>
             </div>
           </div>
@@ -1549,49 +1086,60 @@
       <div class="container">
         <div class="section-header">
           <h2>Our Services</h2>
-          <p>
-            Trusted by over 100,000 customers, we deliver worldwide with a dedicated fleet and over 150 combined years of experience. Specialists in brick matching, we hold 1.5 million reclaimed bricks in stock. Our knowledgeable team offers excellent customer service and takes pride in the quality of our bricks and customer service we offer.
-          </p>
         </div>
-        
+
         <div class="services-grid">
-          <!-- Delivery Services -->
           <div class="service-card">
-            <img src="bricks/Img4.jpg" alt="Delivery Services" class="service-card-image">
+            <img
+              src="RidgeTilesImages/delivery.jpeg"
+              alt="Delivery Services"
+              class="service-card-image"
+            />
             <div class="service-card-content">
               <h3>Worldwide Delivery</h3>
               <p>
-                We offer a worldwide delivery service from individual items to multiple articulated loads. 
-                We use a range of delivery services which include the pallet network and our own fleet of
-                specialist vehicles which include wagons with detachable trailers and moffetts, vans, 
-                pickups and a 2 man delivery service for heavier bulky items that need to be taken into your home. 
-                Please contact our friendly sales team who will assist you with any queries or requirements 
-                you may have.
+                We offer a worldwide delivery service from individual items to
+                multiple articulated loads. We use a range of delivery services
+                which include the pallet network and our own fleet of specialist
+                vehicles which include wagons with detachable trailers and
+                moffetts, vans, pickups and a 2 man delivery service for heavier
+                bulky items that need to be taken into your home. Please contact
+                our friendly sales team who will assist you with any queries or
+                requirements you may have.
               </p>
-              <a href="#" class="cta-button">Contact Sales Team</a>
+              <a
+                href="https://cawardenreclaim.co.uk/transport/"
+                class="cta-button"
+                >Check Delivery Details</a
+              >
             </div>
           </div>
 
-          <!-- Brick Matching -->
           <div class="service-card">
-            <img src="matching.jpg" alt="Brick Matching Service" class="service-card-image">
+            <img
+              src="RidgeTilesImages/ridgeTileMatching.webp"
+              alt="Ridge Tile Matching Service"
+              class="service-card-image"
+            />
             <div class="service-card-content">
-              <h3>Brick Matching Service</h3>
+              <h3>Ridge Tile Matching Service</h3>
               <p>
-                We offer a brick matching service to help you find the right
-                reclaimed brick for your project. This free service takes out the
-                hassle of you trying to source the right brick for your build. Our
-                brick matching experts have over 150 years combined experience and
-                are on hand to provide you with the best match.
+                We provide a professional ridge tile matching service which is
+                FREE to help you find exactly the right ridge tiles for your
+                roof. This complimentary service removes the stress of hunting
+                for the perfect match, making the process straightforward and
+                hassle free.
               </p>
               <p>
-                With our range of genuine reclaimed bricks and decades of
-                experience in brick matching, we will help you maintain the
-                architectural integrity of your project and will provide you with
-                the best brick match from across our handmade, wirecut and pressed
-                brick ranges.
+                Our team with over 150 years of combined experience ensures you
+                get the most accurate and reliable match for your project.
+                Contact us today with your requirements.
               </p>
-              <a href="#" class="cta-button">Get Free Matching</a>
+              <a
+                href="https://cawardenreclaim.co.uk/brick-matching-service/"
+                class="cta-button"
+                >Visit Our Brick Matching Service</a
+              >
             </div>
           </div>
         </div>
@@ -1604,35 +1152,30 @@
         <div class="section-header">
           <h2>See What Our Customers Think</h2>
           <div class="stars">★★★★★</div>
-          <p>
-            4.8/5 stars on Google Reviews - Over 250+ customer reviews
-          </p>
+          <p>4.8/5 stars on Google Reviews - Over 250+ customer reviews</p>
         </div>
-        
         <div class="reviews-grid">
           <div class="review-card">
             <div class="review-stars">★★★★★</div>
             <p class="review-text">
-              "Excellent service and quality bricks. The team helped match our
-              Victorian bricks perfectly for our extension. Highly recommend!"
+              Excellent service and quality bricks. The team helped match our
+              Victorian bricks perfectly for our extension. Highly recommend!
             </p>
             <div class="review-author">- Sarah M.</div>
           </div>
-          
           <div class="review-card">
             <div class="review-stars">★★★★★</div>
             <p class="review-text">
-              "Amazing selection of reclaimed bricks. The brick matching
-              service saved us so much time. Professional delivery too."
+              Amazing selection of reclaimed ridge tiles. The ridge tile
+              matching service saved us so much time. Professional delivery too.
             </p>
             <div class="review-author">- James T.</div>
           </div>
-          
           <div class="review-card">
             <div class="review-stars">★★★★☆</div>
             <p class="review-text">
-              "Great quality reclaimed materials. Staff are very knowledgeable
-              and helpful. Will definitely use again for future projects."
+              Great quality reclaimed ridge tiles. Staff are very knowledgeable
+              and helpful. Will definitely use again for future projects.
             </p>
             <div class="review-author">- Michael R.</div>
           </div>
@@ -1640,143 +1183,34 @@
       </div>
     </section>
 
-    <!-- Additional Brick Types Section -->
-    <section class="section section-dark">
+    <!-- Ridge Tile Projects Section -->
+    <section class="projects-section">
       <div class="container">
-        <div class="section-header">
-          <h2>Specialist Brick Collections</h2>
-          <p>
-            Explore our curated collections of specialist reclaimed bricks for
-            specific architectural periods and styles
-          </p>
-        </div>
-
-        <div class="brick-types-grid">
-          <!-- Imperial Bricks -->
-          <div class="brick-card">
-            <img src="bricks/Img 6 Reclaimed Imperial Bricks.jpg" alt="Reclaimed Imperial Bricks" class="brick-card-image">
-            <div class="brick-card-content">
-              <h3>Reclaimed Imperial Bricks</h3>
-              <p>
-                Explore our collection of reclaimed imperial bricks, ideal for
-                restoring old period buildings, extensions and projects where a
-                traditional look is required. Imperial bricks typically date from
-                the Victorian era these bricks use the imperial measurement system
-                (pre 1970s). Browse our range today.
-              </p>
-              <a href="#" class="cta-button">Browse Stock</a>
-            </div>
+        <div class="projects-layout">
+          <div class="projects-media">
+            <img
+              src="RidgeTilesImages/6ca73345-6196-4921-adad-f1a25b56a433.jpeg"
+              alt="Example reclaimed ridge tile project"
+            />
           </div>
-
-          <!-- Farmhouse Bricks -->
-          <div class="brick-card">
-            <img src="bricks/Img 7 Farmhouse.jpg" alt="Farmhouse Bricks" class="brick-card-image">
-            <div class="brick-card-content">
-              <h3>Farmhouse Bricks</h3>
-              <p>
-                View our collection of reclaimed farmhouse bricks, best known for
-                their rustic appearance and natural characteristics. Normally
-                handmade with a light texture these old bricks are perfect for
-                traditional country style homes, garden walls and any project
-                where a traditional rustic feel is required. Browse our stock
-                today.
-              </p>
-              <a href="#" class="cta-button">Browse Stock</a>
-            </div>
+          <div class="projects-content">
+            <span class="projects-eyebrow">Project inspiration</span>
+            <h2>Ridge Tile Projects</h2>
+            <p>
+              Restoring or extending a property? Reclaimed ridge tiles help keep
+              your roofline consistent while preserving character, weathered
+              tone, and period detail.
+            </p>
+            <p>
+              Our team can advise on profile matching, quantity guidance, and
+              the most suitable reclaimed options for your project.
+            </p>
+            <p>
+              Explore customer project examples for inspiration before speaking
+              with our specialists.
+            </p>
+            <a href="#" class="cta-button">View Customer Project</a>
           </div>
-
-          <!-- Victorian Bricks -->
-          <div class="brick-card">
-            <img src="bricks/Img 9 Victorian House Bricks.jpg" alt="Victorian House Bricks" class="brick-card-image">
-            <div class="brick-card-content">
-              <h3>Victorian House Bricks</h3>
-              <p>
-                Browse our collection of reclaimed Victorian house bricks, often
-                know for their durability and rustic character. These ecofriendly
-                reclaimed bricks from the Victorian era blend seamlessly with
-                existing period brickwork to create a seamless look. View our
-                range today.
-              </p>
-              <a href="#" class="cta-button">Browse Stock</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>
-
-      <!-- Video Section -->
-    <section class="section section-light" style="padding: 60px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
-      <div class="container" style="text-align: center">
-        <h2 style="margin-bottom: 20px; font-size: 2.2rem; color: #223422; font-weight: 600;">
-          Reclaimed Bricks Explained: Video Library
-        </h2>
-        <p style="font-size: 1.1rem; color: #666; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
-          Watch our expert videos to learn more about reclaimed bricks, their benefits, and how to choose the right ones for your project.
-        </p>
-        
-        <div class="video-grid">
-          
-          <!-- Video 1: Main Introduction -->
-          <div class="video-card">
-            <div class="video-wrapper">
-              <iframe
-                src="https://www.youtube.com/embed/Nbo14zZEp40"
-                title="Cawarden Reclaimed Bricks Introduction"
-                frameborder="0"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div class="video-info">
-              <h4 class="video-title">
-                Introduction to Reclaimed Bricks
-              </h4>
-              <p class="video-description">
-                Discover the benefits of using reclaimed bricks in your building projects and learn about their timeless aesthetic and eco-friendly advantages.
-              </p>
-            </div>
-          </div>
-
-          <!-- Video 2: Engineering Bricks -->
-          <div class="video-card">
-            <div class="video-wrapper">
-              <iframe
-                src="https://www.youtube.com/embed/BwnZ0L9cC60"
-                title="What Are Engineering Bricks | Cawarden Reclaim"
-                frameborder="0"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div class="video-info">
-              <h4 class="video-title">
-                What Are Engineering Bricks?
-              </h4>
-              <p class="video-description">
-                Learn about engineering bricks, their superior strength and durability, and why they're essential for structural applications.
-              </p>
-            </div>
-          </div>
-
-          <!-- Video 3: Brick Colours -->
-          <div class="video-card">
-            <div class="video-wrapper">
-              <iframe
-                src="https://www.youtube.com/embed/HL45FKMkFkQ"
-                title="Why Reclaimed Bricks Are Different Colours | Cawarden Reclaim"
-                frameborder="0"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div class="video-info">
-              <h4 class="video-title">
-                Why Reclaimed Bricks Have Different Colours
-              </h4>
-              <p class="video-description">
-                Understand the fascinating reasons behind the varied colours of reclaimed bricks and how this adds character to your projects.
-              </p>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
@@ -1785,482 +1219,81 @@
     <section class="faq-section">
       <div class="container">
         <div class="section-header">
-          <h2>Reclaimed Bricks Frequently Asked Questions</h2>
+          <h2>Reclaimed Ridge Tiles Frequently Asked Questions</h2>
         </div>
-
         <div class="faq-grid">
           <div class="faq-item">
             <button class="faq-question" onclick="toggleFaq(this)">
-              What are reclaimed bricks?
+              What are reclaimed ridge tiles?
             </button>
             <div class="faq-answer">
               <p>
-                Reclaimed bricks are bricks that have previously been used in old buildings and structures. These salvaged bricks are removed, cleaned and reused in restoration or renovation projects, new constructions or house extensions.
+                Ridge tiles are specially shaped tiles that sit along the peak
+                or ridge of a roof, covering the joint where two roof slopes
+                meet. Reclaimed ridge tiles are old tiles that have been
+                carefully removed from old existing roofs, they are then sorted
+                and quality checked for reuse. Reclaimed ridge tiles are perfect
+                for roof repairs or extensions because they match the age,
+                colour, texture and character of your existing roof, this is
+                something a new ridge tile cannot replicate.
               </p>
             </div>
           </div>
-
           <div class="faq-item">
             <button class="faq-question" onclick="toggleFaq(this)">
-              Are reclaimed bricks structurally sound?
+              Why choose reclaimed ridge tiles instead of new ridge tiles?
             </button>
             <div class="faq-answer">
               <p>
-                Yes, all our bricks are durable and structurally sound. We personally reclaim our bricks so each old brick is graded and quality checked; we choose only the best. Cawarden can provide compressive strength data upon request contact us for more information.
+                By choosing reclaimed ridge tiles this allows you to create a
+                seamless match to your existing roof profile, colour, and
+                weathered finish. If you choose new ridge tiles they look
+                noticeably different in tone and texture. They are commonly used
+                on period properties and conservation projects.
               </p>
             </div>
           </div>
-
           <div class="faq-item">
             <button class="faq-question" onclick="toggleFaq(this)">
-              What are the benefits of using reclaimed bricks?
+              How do I match reclaimed ridge tiles to my roof?
             </button>
             <div class="faq-answer">
               <p>
-The benefits of using reclaimed bricks are:
-<li>Environmentally friendly as it reduces waste and carbon footprint.</li>
-<li>Unique weathered character – you just cannot achieve with new bricks.</li>
-<li>More durable as they have already withstood the test of time and lasted 100+ years. Old bricks were made using a much denser clay and fired to a higher temperature in a wood fired kiln.</li>
-<li>Brick matching – Using old bricks salvaged from your local area are perfect if you need to match to existing brickwork. If you have a period property you are more likely to meet the requirements of the planning and conservation officer which is virtually impossible to meet with new bricks.</li>
+                We provide a FREE reclaimed ridge tile matching service to
+                ensure a perfect match with your existing roof. Simply send us
+                photos and measurements of the ridge tile you are looking to
+                match to or replace, and our experts will do the rest. Contact
+                our sales team today to find the right ridge tiles for your
+                project.
               </p>
             </div>
           </div>
-
           <div class="faq-item">
             <button class="faq-question" onclick="toggleFaq(this)">
-              Where do reclaimed bricks come from?
+              How many ridge tiles do I need?
             </button>
             <div class="faq-answer">
               <p>
-Reclaimed bricks are salvaged from deconstructed or demolished buildings such as schools, factories, hospitals, public buildings and houses.
+                The number of ridge tiles required depends on the size of the
+                ridge tile and the length of the roof ridge. Ridge tiles are
+                normally installed with mortar joints between each tile, so you
+                need to allow for overlap and joint spacing when calculating
+                quantities. Measure the total ridge length and divide by the
+                tile length, factoring in joints or contact our team and we can
+                calculate the exact number you needed.
               </p>
             </div>
           </div>
-
           <div class="faq-item">
             <button class="faq-question" onclick="toggleFaq(this)">
-              Can reclaimed bricks be used for structural work?
+              Are reclaimed ridge tiles suitable for listed buildings?
             </button>
             <div class="faq-answer">
               <p>
-Yes, as each reclaimed brick goes through strict processes to ensure their suitability for modern day use and load bearing. Cawarden can provide compressive strength data upon request. Contact us for more information.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              What are common uses for reclaimed bricks?
-            </button>
-            <div class="faq-answer">
-              <p>
-The main uses are:
-
-<li>Restoration of old brickwork i.e. replacing damaged bricks.</li>
-<li>Extending Victorian, Edwardian and Georgian properties – by using original salvaged bricks it will keep the extension traditional looking and within keeping to the existing property.</li>
-<li>Exterior walls, garden landscaping and facades – using reclaimed bricks that match your original brickwork will create a seamless look.</li>
-<li>Create feature walls, chimney and fireplace internals to add character to the aesthetic look inside the property.</li>
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Are reclaimed bricks available in different colours and styles?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes. With over 1.5 million reclaimed bricks in stock we have a range of colours, textures and sizes to choose from. The brick colour depends on the below factors:
-
-<li>Origin</li>
-<li>Age</li>
-<li>Clay colour</li>
-<li>Manufacturing methods used – such as wirecut, pressed and handmade</li>
-<li>The firing process – if fired in a wood, gas or coal kiln</li>
-<li>Weathering and aging overtime</li>
-<li>Unique finish</li>
-
-If you are looking for a particular type and colour brick, contact us or use our online brick matching service to find the right one for you.              
-</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              How are reclaimed bricks cleaned and prepared for reuse?
-            </button>
-            <div class="faq-answer">
-              <p>
-Each recycled brick is processed by hand in our yard. The process is:
-
-<li>Washed to remove old mortar</li>
-<li>Quality checked for damage</li>
-<li>Left to air dry</li>
-
-By following this process it sustains the original look and patina.              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Do reclaimed bricks require special installation techniques?
-            </button>
-            <div class="faq-answer">
-              <p>
-No. special installation techniques are not required; just treat and install them like a normal new house brick.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              How can I tell if reclaimed bricks are right for my project?
-            </button>
-            <div class="faq-answer">
-              <p>
-Reclaimed bricks are suitable for the majority of projects. They are often used to match brickwork on existing properties to enhance the overall look of the extension/ renovation. The second hand bricks are ecofriendly reducing environmental impact, unique in colour and texture to add character to your building or wall.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Do reclaimed bricks have certifications or standards?
-            </button>
-            <div class="faq-answer">
-              <p>
-Certification is available upon request – The governing body we use is NSCA. The testing process would be a moisture test and a progressive strength test. The old bricks will be sent off for testing at a cost to the customer. A certificate will be provided upon competition. Please contact us for more information.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Can reclaimed bricks be used indoors?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes, they are extremely popular for indoor use due to their own unique character and charm. Accent walls, backsplashes in kitchens, fireplace features or rustic flooring are what most customers use for second hand bricks. Some of the reasons customers choose to use reclaimed bricks rather than new bricks are:
-
-<li>Ecofriendly as they are reused rather than purchasing new</li>
-<li>Strong and durable</li>
-<li>Unique character you cannot achieve with new bricks</li>
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              How do I maintain reclaimed brickwork?
-            </button>
-            <div class="faq-answer">
-              <p>
-Reclaimed bricks do not require maintenance although some customers choose to seal them with a sealer. By sealing the second hand bricks this can help with water resistance, especially in wet or particularly cold climates. If you choose to do this, we advise to use a breathable sealer, we can provide you with a list of recommended sealers please contact us for more information.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Can reclaimed bricks be used for exterior walls or garden projects?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes. Reclaimed bricks can be used for outdoor projects such as garden walls, patios, paths, potting sheds, greenhouses and exterior buildings as they were made with much denser clay making them frost resistant.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              How many reclaimed bricks do I need per square meter?
-            </button>
-            <div class="faq-answer">
-              <p>
-On average, you will need about 60–65 reclaimed bricks per square meter for standard brickwork. We’re happy to help you calculate exact quantities based on the old recycled bricks you choose. Contact us for more information.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Are reclaimed bricks environmentally friendly?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes. Using reclaimed bricks reduces waste, saves energy and helps preserve historical materials, making them an eco-conscious building choice.
-
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Do you deliver reclaimed bricks?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes, we deliver nationwide. Cawarden Reclaim have a fantastic delivery network offering local and national delivery services. The delivery cost depends on your location and the quantity required. Contact us for an accurate shipping quote.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Can I view the bricks before buying?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes of course! We encourage customers to visit our yard and see the quality and character of our reclaimed bricks in person.
-
-Our opening times are:
-
-Monday – Friday: 8am – 5pm
-
-Saturday: 9am – 4pm              
-</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Can you match bricks to existing buildings?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes, Cawarden reclaim offer a brick matching service to help you find the right brick for your project, so it blends seamlessly with your exisiting building.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Why choose reclaimed bricks over new bricks?
-            </button>
-            <div class="faq-answer">
-              <p>
-Reclaimed bricks offer unique character, weathered patina and sustainability which you just can’t get with new bricks. Ideal for restoration projects, period properties and anyone wanting to achieve a traditional look.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              What types of buildings are reclaimed bricks sourced from?
-            </button>
-            <div class="faq-answer">
-              <p>
-Cawarden Reclaims stock of reclaimed bricks are salvaged from old houses, mills, factories, Churches, barns, warehouses and other historic buildings. Each batch has its own unique character and story.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Are reclaimed bricks suitable for listed or heritage buildings?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes. Reclaimed bricks are the best choice for listed or heritage properties because they match the original brickwork, material and appearance helping to maintain architectural authenticity.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Do you sell matching reclaimed brick specials, like corners or slips?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes. We have a variety of special reclaimed bricks available, our stock consists of;
-
-<li>Corner</li>
-<li>Bullnose</li>
-<li>Decorative bricks such corbel bricks</li>
-<li>Plinth</li>
-<li>Squint</li>
-<li>Cant</li>
-<li>Brick slips</li>
-
-Please contact our friendly sales team with your requirements.              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Can reclaimed bricks be used for fireplaces or stove surrounds?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes. Reclaimed bricks can be used for fireplaces and stove surrounds. The main reason customers choose them are they handle heat well due to the way they were fired in the kiln. They also add a beautiful rustic look to your room.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Do you offer advice for choosing the right reclaimed bricks?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes, we offer a brick matching service whereby we provide our expert advice and recommend the correct reclaimed brick for your project. Whether you’re matching to existing brickwork or starting a brand new project, we’re happy to guide you to the most suitable recycled brick for your project.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Can reclaimed bricks be painted or limewashed?
-            </button>
-            <div class="faq-answer">
-              <p>
-Of course! Reclaimed bricks can be painted or limewashed to create unique character. We strongly recommend you use breathable paints or traditional lime based products to avoid trapping moisture.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Do you buy reclaimed bricks from demolition projects?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes, we purchase high quality reclaimed bricks in bulk from trusted demolition contractors. If you’re clearing a site and have bricks to sell, contact us for a valuation.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Can reclaimed bricks be used for paving or patios?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes, Reclaimed bricks are perfect for use as outdoor paving, garden paths and patios. Some customers choose to use breathable moisture resistant sealer, but this is personal preference.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              What makes reclaimed bricks sustainable?
-            </button>
-            <div class="faq-answer">
-              <p>
-The main reasons reclaimed bricks are sustainable and environmentally friendly are:
-
-<li>Reduce landfill waste</li>
-<li>Conserve natural resources</li>
-<li>Avoid the energy intensive process of manufacturing new bricks</li>
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Can you supply large quantities of matching reclaimed bricks?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes, we have over 1.5 million reclaimed bricks available. We regularly supply large scale renovations, extensions and commercial developments. Contact us with your requirements.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Can I request a specific type of brick when ordering reclaimed bricks?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes. Cawarden Reclaim have over 1,500,000 reclaimed bricks to choose from. You can specify a type, size and colour and we will use our expert knowledge and brick matching service to provide you with the closest brick possible.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Do you offer brick samples?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes. We offer a sample service so you can check the colour, texture and suitability of our reclaimed bricks before committing to a large order. Contact us with your sample request today!
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Are reclaimed bricks fireproof?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes. Most reclaimed bricks are highly fire-resistant, making them ideal for fireplaces and stove surrounds. They were often made with denser clay and fired at higher temperatures than modern bricks.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              What's the Difference Between Wirecut, Handmade and Pressed Bricks?
-            </button>
-            <div class="faq-answer">
-              <p>
-The differences are:
-
-Wirecut Bricks
-
-<li>Made by cutting clay with wires after it’s pushed through a mould by hand.</li>
-<li>Smooth, straight and uniform finish.</li>
-<li>Versatile have a lot of character, but their uniformity makes them easy to work with.</li>
-
-Handmade Bricks
-
-<li>Oldest form of brick making.</li>
-<li>Made using clay which is shaped by hand in moulds.</li>
-<li>Rustic, uneven finish with lots of character – each brick is unique.</li>
-<li>Perfect for period homes, fireplaces, or anywhere you would like a traditional, aged look.</li>
-
-Pressed Bricks
-
-<li>Made using clay which is pressed into moulds and compressed down by a machine.</li>
-<li>Neater look and finish than a handmade brick.</li>
-<li>Normally have a frog mark bearing the maker’s name.</li>
-<li>Ideal for Victorian homes, outdoor walls and general building use as pressed bricks are a lot harder than handmade bricks.</li>
-<li>Normally used for engineering purposes such as foundations and supporting walls.</li>
-</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Are there size differences between reclaimed bricks?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes, there are size differences between reclaimed bricks. Generally, the older the reclaimed brick the smaller the height of the brick. The sizes vary due to the nonstandard manufacturing processes.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              How can I identify the type of brick I have or need to match?
-            </button>
-            <div class="faq-answer">
-              <p>
-We can identify it for you, Cawarden Reclaim offer a brick matching service. Contact us directly and we will recommend the right brick for you!
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              Will reclaimed bricks continue to weather or change in appearance?
-            </button>
-            <div class="faq-answer">
-              <p>
-Yes, some natural weathering may occur after installation, however, to prevent further aging a breathable sealant can be used to retain their appearance for years to come.
+                Yes, reclaimed ridge tiles are used on listed buildings and
+                conservation areas because they maintain the original character
+                and appearance of the roof. Many conservation officers favour
+                reclaimed materials for roof repairs on old buildings.
               </p>
             </div>
           </div>
@@ -2268,11 +1301,13 @@ Yes, some natural weathering may occur after installation, however, to prevent f
       </div>
     </section>
 
-        <!-- Contact Banner Section -->
+    <!-- Contact Banner Section -->
     <section class="contact-banner">
       <div class="container">
         <div class="banner-text">
-          <h2>Do you require anymore information on our reclaimed bricks?</h2>
+          <h2>
+            Do you require anymore information on our reclaimed ridge tiles?
+          </h2>
           <div class="contact-info">
             <div class="contact-item">
               <span class="contact-label">Call</span>
@@ -2280,72 +1315,59 @@ Yes, some natural weathering may occur after installation, however, to prevent f
             </div>
             <div class="contact-item">
               <span class="contact-label">Email</span>
-              <a href="mailto:info@cawardenreclaim.co.uk" class="contact-link">info@cawardenreclaim.co.uk</a>
+              <a href="mailto:info@cawardenreclaim.co.uk" class="contact-link"
+                >info@cawardenreclaim.co.uk</a
+              >
             </div>
           </div>
         </div>
       </div>
     </section>
 
-
     <script>
       function toggleFaq(element) {
         const answer = element.nextElementSibling;
         const isOpen = answer.style.display === "block";
-
-        // Close all FAQ items and remove active class
         document.querySelectorAll(".faq-answer").forEach((item) => {
           item.style.display = "none";
         });
         document.querySelectorAll(".faq-question").forEach((item) => {
           item.classList.remove("active");
         });
-
-        // Open the clicked item if it wasn't already open
         if (!isOpen) {
           answer.style.display = "block";
           element.classList.add("active");
         }
       }
 
-      // Add smooth scrolling for anchor links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
           const target = document.querySelector(this.getAttribute("href"));
           if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
           }
         });
       });
 
-      // Add scroll animations
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+      );
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-          }
-        });
-      }, observerOptions);
-
-      // Observe all cards for animation
-      document
-        .querySelectorAll(".brick-card, .service-card")
-        .forEach((card) => {
-          card.style.opacity = "0";
-          card.style.transform = "translateY(30px)";
-          card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-          observer.observe(card);
-        });
+      document.querySelectorAll(".service-card").forEach((card) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(30px)";
+        card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+        observer.observe(card);
+      });
     </script>
   </body>
 </html>
